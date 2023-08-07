@@ -4,8 +4,8 @@ const usdResult = document.getElementById('usd-result');
 const tomResult = document.getElementById('tom-result');
 
 // Define the initial values
-const amd = 385.96;
-const tom = 49650;
+const amd = 385.51;
+const tom = 49644;
 
 // Add an event listener to the amdInput field to calculate and update the results
 amdInput.addEventListener('input', function() {
