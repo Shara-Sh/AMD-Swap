@@ -1,0 +1,20 @@
+:root {
+    --blue: #0a146e;
+    --white: #ffffff;
+    --selectedwhite: #f7fafc;
+    --black: #1e1e1e;
+    --red: #ed213a;
+    --darkred: #93291e;
+}
+
+body {
+    touch-action: pan-y;
+    user-select: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .swap-box {
+        width: 25% !important;
+        padding: 0 2% !important;
+    }
+}

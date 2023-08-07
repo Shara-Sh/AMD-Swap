@@ -1,0 +1,114 @@
+{
+    "short_name": "AMD Swap",
+    "name": "Armenia Currency Swap",
+    "icons": [
+        {
+            "src": "src/pwa/16.png",
+            "sizes": "16x16"
+          },
+          {
+            "src": "src/pwa/20.png",
+            "sizes": "20x20"
+          },
+          {
+            "src": "src/pwa/29.png",
+            "sizes": "29x29"
+          },
+          {
+            "src": "src/pwa/32.png",
+            "sizes": "32x32"
+          },
+          {
+            "src": "src/pwa/40.png",
+            "sizes": "40x40"
+          },
+          {
+            "src": "src/pwa/50.png",
+            "sizes": "50x50"
+          },
+          {
+            "src": "src/pwa/57.png",
+            "sizes": "57x57"
+          },
+          {
+            "src": "src/pwa/58.png",
+            "sizes": "58x58"
+          },
+          {
+            "src": "src/pwa/60.png",
+            "sizes": "60x60"
+          },
+          {
+            "src": "src/pwa/64.png",
+            "sizes": "64x64"
+          },
+          {
+            "src": "src/pwa/72.png",
+            "sizes": "72x72"
+          },
+          {
+            "src": "src/pwa/76.png",
+            "sizes": "76x76"
+          },
+          {
+            "src": "src/pwa/80.png",
+            "sizes": "80x80"
+          },
+          {
+            "src": "src/pwa/87.png",
+            "sizes": "87x87"
+          },
+          {
+            "src": "src/pwa/100.png",
+            "sizes": "100x100"
+          },
+          {
+            "src": "src/pwa/114.png",
+            "sizes": "114x114"
+          },
+          {
+            "src": "src/pwa/120.png",
+            "sizes": "120x120"
+          },
+          {
+            "src": "src/pwa/128.png",
+            "sizes": "128x128"
+          },
+          {
+            "src": "src/pwa/144.png",
+            "sizes": "144x144"
+          },
+          {
+            "src": "src/pwa/152.png",
+            "sizes": "152x152"
+          },
+          {
+            "src": "src/pwa/167.png",
+            "sizes": "167x167"
+          },
+          {
+            "src": "src/pwa/180.png",
+            "sizes": "180x180"
+          },
+          {
+            "src": "src/pwa/192.png",
+            "sizes": "192x192"
+          },
+          {
+            "src": "src/pwa/256.png",
+            "sizes": "256x256"
+          },
+          {
+            "src": "src/pwa/512.png",
+            "sizes": "512x512"
+          },
+          {
+            "src": "src/pwa/1024.png",
+            "sizes": "1024x1024"
+          }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#1e1e1e",
+    "display": "standalone",
+    "theme_color": "#1e1e1e"
+}

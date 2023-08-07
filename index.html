@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AMD Swap</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#1e1e1e">
+        <link rel="manifest" href="manifest.json">
+        <!-- title icon -->
+        <link rel="icon" href="src/icon/logo-zoom-in.png">
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="style.css">
+        <!-- bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <!-- jquary -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!-- javascript -->
+        <!-- <script src="app.js"></script> -->
+        <!-- tippy js -->
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/15070fb99f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://kit.fontawesome.com/15070fb99f.css" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <body class="d-flex justify-content-center align-items-center" style="height: 100vh; overflow: hidden; background-color: var(--black);">
+        <div class="rounded swap-box" style="padding: 0 5%; width: 90%; background-color: var(--selectedwhite); position: fixed;">
+            <div class="header mt-3">
+                <h1 class="text-center" style="font-family: Pacifico; color: var(--red);">SWAP</h1>
+            </div>
+            <div class="main">
+                <div class="amd-amount mt-3">
+                    <div class="d-flex">
+                        <img src="src/img/armenia-flag-xl.jpg" width="32px" height="22.85" style="margin-right: 5px;" alt="usa" class="rounded-1 mb-1" id="amdFlag">
+                        <b class="mb-0">AMD</b>
+                    </div>
+                    <input id="amd-input" type="text" pattern="[0-9]*" inputmode="numeric" class="amd-input container-fluid">
+                </div>
+                <hr class="">
+                <div class="usd-amount mt-3">
+                    <div class="d-flex">
+                        <img src="src/img/united-states-of-america-flag-xl.jpg" width="32px" height="22.85" style="margin-right: 5px;" alt="usa" class="rounded-1 mb-1">
+                        <b class="mb-0">USD</b>
+                    </div>
+                    <input id="usd-result" type="text" class="usd-input container-fluid" disabled>
+                </div>
+                <div class="tom-amount mt-3">
+                    <div class="d-flex">
+                        <img src="src/img/iran-flag-xl.jpg" width="32px" height="22.85" style="margin-right: 5px;" alt="usa" class="rounded-1 mb-1" id="tomFlag">
+                        <b class="mb-0">TOM</b>
+                    </div>
+                    <input id="tom-result" type="text" class="tom-input container-fluid mb-4" disabled>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
