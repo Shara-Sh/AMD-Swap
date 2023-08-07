@@ -64,5 +64,13 @@
             </div>
         </div>
         <script src="app.js"></script>
+        <script>
+            if (navigator.serviceWorker) {
+              navigator.serviceWorker.register (
+                '/AMD-Swap/sw.js',
+                {scope: '/AMD-Swap/'}
+              )
+            }
+        </script>
     </body>
 </html>
