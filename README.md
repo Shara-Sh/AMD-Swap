@@ -1,4 +1,4 @@
-<div align="center"><img src="src/icon/logo-zoom-in.png" width="100px;" style="border-radius: 100%;"></div>
+<div align="center"><img src="src/icon/logo-full.png" width="100px;"></div>
 
 # Personal Currency Exchange Platform
 
