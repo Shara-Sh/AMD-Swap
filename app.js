@@ -1,11 +1,11 @@
 // Get the input and result fields
 const amdInput = document.getElementById('amd-input');
-const usdResult = document.getElementById('usd-result');
-const tomResult = document.getElementById('tom-result');
+const usdInput = document.getElementById('usd-input');
+const tomInput = document.getElementById('tom-input');
 
 // Define the initial values
 const amd = 385.51;
-const tom = 49644;
+const tom = 49480;
 
 // Add an event listener to the amdInput field to calculate and update the results
 amdInput.addEventListener('input', function() {
@@ -13,15 +13,15 @@ amdInput.addEventListener('input', function() {
     
     if (isNaN(amdAmount) || amdAmount <= 0) {
         amdInput.value = '';
-        usdResult.value = '';
-        tomResult.value = '';
+        usdInput.value = '';
+        tomInput.value = '';
     } else {
         // Calculate USD and TOM amounts based on the initial values of amd and tom
         const usdAmount = amdAmount / amd;
         const tomAmount = Math.ceil(tom * usdAmount);
         
-        usdResult.value = isNaN(usdAmount) ? '' : '$ ' + usdAmount.toFixed(2); // Display USD amount with 2 decimal places
-        tomResult.value = isNaN(tomAmount) ? '' : 'T ' + tomAmount.toLocaleString(undefined, { minimumFractionDigits: 0 }); // Display TOM amount with 2 decimal places
+        usdInput.value = isNaN(usdAmount) ? '' : '$ ' + usdAmount.toFixed(2); // Display USD amount with 2 decimal places
+        tomInput.value = isNaN(tomAmount) ? '' : 'T ' + tomAmount.toLocaleString(undefined, { minimumFractionDigits: 0 }); // Display TOM amount with 2 decimal places
         amdInput.value = '֏ ' + amdAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
     }
 });
