@@ -4,8 +4,8 @@ const usdInput = document.getElementById('usd-input');
 const tomInput = document.getElementById('tom-input');
 
 // Define the initial values
-const amd = 385.51;
-const tom = 49480;
+const amd = 386.25;
+const tom = 49632;
 
 // Add an event listener to the amdInput field to calculate and update the results
 amdInput.addEventListener('input', function() {
@@ -24,6 +24,12 @@ amdInput.addEventListener('input', function() {
         tomInput.value = isNaN(tomAmount) ? '' : 'T ' + tomAmount.toLocaleString(undefined, { minimumFractionDigits: 0 }); // Display TOM amount with 2 decimal places
         amdInput.value = '֏ ' + amdAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
     }
+});
+
+amdInput.addEventListener('click', function() {
+    amdInput.value = '';
+    usdInput.value = '';
+    tomInput.value = '';
 });
 
 tippy("#amdFlag", {content: amd});
