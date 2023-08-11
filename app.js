@@ -1,119 +1,51 @@
-const amdInput = document.getElementById('amd-input');
-const usdInput = document.getElementById('usd-input');
-const tomInput = document.getElementById('tom-input');
-const gelInput = document.getElementById('gel-input');
+const currencyData = [
+    { name: 'amd', rate: 385.90, symbol: '֏' },
+    { name: 'usd', rate: 1, symbol: '$' },
+    { name: 'tom', rate: 49673, symbol: 'T' },
+    { name: 'gel', rate: 2.62, symbol: '₾' },
+    { name: 'gbp', rate: 0.79, symbol: '£' },
+    { name: 'eur', rate: 0.91, symbol: '€' },
+    // Add more currencies here
+];
 
-const amd = 386.25;
-const tom = 49632;
-const gel = 2.62;
+const inputFields = {
+    amd: document.getElementById('amd-input'),
+    usd: document.getElementById('usd-input'),
+    tom: document.getElementById('tom-input'),
+    gel: document.getElementById('gel-input'),
+    gbp: document.getElementById('gbp-input'),
+    eur: document.getElementById('eur-input'),
+    // Add more input fields here
+};
 
-amdInput.addEventListener('input', function() {
-    const amdAmount = parseFloat(amdInput.value.replace(/[^\d.]/g, ''));
-    
-    if (isNaN(amdAmount) || amdAmount <= 0) {
-        amdInput.value = '';
-        usdInput.value = '';
-        tomInput.value = '';
-        gelInput.value = '';
+for (const currency of currencyData) {
+    inputFields[currency.name].addEventListener('input', function () {
+        updateCurrencyInputs(currency);
+    });
+
+    inputFields[currency.name].addEventListener('click', function () {
+        clearAllInputs();
+    });
+
+    tippy(`#${currency.name}Flag`, { content: currency.rate });
+}
+
+function updateCurrencyInputs(baseCurrency) {
+    const baseAmount = parseFloat(inputFields[baseCurrency.name].value.replace(/[^\d.]/g, ''));
+
+    if (isNaN(baseAmount) || baseAmount <= 0) {
+        clearAllInputs();
     } else {
-        const usdAmount = amdAmount / amd;
-        const tomAmount = Math.ceil(tom * usdAmount);
-        const gelAmount = Math.ceil(gel * usdAmount);
-        
-        amdInput.value = isNaN(amdAmount) ? '' : '֏ ' + amdAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-        usdInput.value = isNaN(usdAmount) ? '' : '$ ' + usdAmount.toFixed(2);
-        tomInput.value = isNaN(tomAmount) ? '' : 'T ' + tomAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-        gelInput.value = isNaN(gelAmount) ? '' : '₾ ' + gelAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
+        for (const currency of currencyData) {
+            const convertedAmount = baseAmount * (currency.rate / baseCurrency.rate);
+            const formattedAmount = currency.symbol + ' ' + convertedAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
+            inputFields[currency.name].value = isNaN(convertedAmount) ? '' : formattedAmount;
+        }
     }
-});
+}
 
-usdInput.addEventListener('input', function() {
-    const usdAmount = parseFloat(usdInput.value.replace(/[^\d.]/g, ''));
-    
-    if (isNaN(usdAmount) || usdAmount <= 0) {
-        amdInput.value = '';
-        usdInput.value = '';
-        tomInput.value = '';
-        gelInput.value = '';
-    } else {
-        const amdAmount = usdInput * amd;
-        const tomAmount = usdInput * tom;
-        const gelAmount = usdInput * gel;
-        
-        amdInput.value = isNaN(amdAmount) ? '' : '֏ ' + amdAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-        usdInput.value = isNaN(usdAmount) ? '' : '$ ' + usdAmount.toFixed(2);
-        tomInput.value = isNaN(tomAmount) ? '' : 'T ' + tomAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-        gelInput.value = isNaN(gelAmount) ? '' : '₾ ' + gelAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
+function clearAllInputs() {
+    for (const field of Object.values(inputFields)) {
+        field.value = '';
     }
-});
-
-tomInput.addEventListener('input', function() {
-    const tomAmount = parseFloat(tomInput.value.replace(/[^\d.]/g, ''));
-    
-    if (isNaN(tomAmount) || tomAmount <= 0) {
-        amdInput.value = '';
-        usdInput.value = '';
-        tomInput.value = '';
-        gelInput.value = '';
-    } else {
-        const usdAmount = tomAmount / tom;
-        const amdAmount = Math.ceil(amd * usdAmount);
-        const gelAmount = Math.ceil(gel * usdAmount);
-        
-        amdInput.value = isNaN(amdAmount) ? '' : '֏ ' + amdAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-        usdInput.value = isNaN(usdAmount) ? '' : '$ ' + usdAmount.toFixed(2);
-        tomInput.value = isNaN(tomAmount) ? '' : 'T ' + tomAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-        gelInput.value = isNaN(gelAmount) ? '' : '₾ ' + gelAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-    }
-});
-
-gelInput.addEventListener('input', function() {
-    const gelAmount = parseFloat(gelInput.value.replace(/[^\d.]/g, ''));
-    
-    if (isNaN(gelAmount) || gelAmount <= 0) {
-        amdInput.value = '';
-        usdInput.value = '';
-        tomInput.value = '';
-        gelInput.value = '';
-    } else {
-        const usdAmount = gelAmount / gel;
-        const amdAmount = Math.ceil(amd * usdAmount);
-        const tomAmount = Math.ceil(tom * usdAmount);
-        
-        amdInput.value = isNaN(amdAmount) ? '' : '֏ ' + amdAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-        usdInput.value = isNaN(usdAmount) ? '' : '$ ' + usdAmount.toFixed(2);
-        tomInput.value = isNaN(tomAmount) ? '' : 'T ' + tomAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-        gelInput.value = isNaN(gelAmount) ? '' : '₾ ' + gelAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-    }
-});
-
-amdInput.addEventListener('click', function() {
-    amdInput.value = '';
-    usdInput.value = '';
-    tomInput.value = '';
-    gelInput.value = '';
-});
-
-usdInput.addEventListener('click', function() {
-    amdInput.value = '';
-    usdInput.value = '';
-    tomInput.value = '';
-    gelInput.value = '';
-});
-
-tomInput.addEventListener('click', function() {
-    amdInput.value = '';
-    usdInput.value = '';
-    tomInput.value = '';
-    gelInput.value = '';
-});
-
-gelInput.addEventListener('click', function() {
-    amdInput.value = '';
-    usdInput.value = '';
-    tomInput.value = '';
-    gelInput.value = '';
-});
-
-tippy("#amdFlag", {content: amd});
-tippy("#tomFlag", {content: tom.toLocaleString(undefined, { minimumFractionDigits: 0 })});
+}
