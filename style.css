@@ -44,6 +44,10 @@ img {
     visibility: hidden;
 }
 
+.cal-header {
+    margin: 0 5.5%;
+}
+
 .cal-display {
     width: 100% !important;
     padding: 20px;

@@ -28,7 +28,6 @@
         <!-- fontawesome -->
         <script src="https://kit.fontawesome.com/15070fb99f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://kit.fontawesome.com/15070fb99f.css" crossorigin="anonymous">
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -72,7 +71,7 @@
                 <div class="gbp-amount mt-3">
                     <div class="d-flex">
                         <img src="src/img/united-kingdom-flag-xl.jpg" width="32px" height="22.85" alt="gbp" class="rounded-1 mb-1" id="gbpFlag">
-                        <b class="mb-0">GPB</b>
+                        <b class="mb-0">GBP</b>
                     </div>
                     <input id="gbp-input" type="text" pattern="[0-9]*" inputmode="numeric" class="gbp-input container-fluid">
                 </div>
@@ -86,16 +85,16 @@
             </div>
         </div>
         <!--calculator overlay-->
-        <div class="rounded cal-overlay cal-overlay-hidden d-flex flex-column justify-content-center align-items-center" id="calOverlay">
-            <div class="cal-header mt-3 d-flex justify-content-between align-items-center">
+        <div class="rounded cal-overlay cal-overlay-hidden d-flex flex-column" id="calOverlay">
+            <div class="cal-header mt-3 d-flex flex-row justify-content-between align-items-center">
                 <h1 class="text-center">SWAP</h1>
-                <a id="xIcon"><i class="fa-solid fa-x" style="color: #1e1e1e;"></i></a>
+                <a id="xIcon"><i class="fa-solid fa-xmark fa-2xl" style="color: #1e1e1e;"></i></a>
             </div>
-            <div class="cal-container">
+            <div class="cal-container mt-3">
                 <div class="calculator">
                     <form class="d-flex flex-column justify-content-center align-items-center">
                         <div>
-                            <input type="text" name="display" class="text-end cal-display">
+                            <input type="text" name="display" class="text-end cal-display" id="calDisplay">
                         </div>
                         <div>
                             <input type="button" value="AC" onclick="display.value = ''">
@@ -107,7 +106,7 @@
                             <input type="button" value="7" onclick="display.value += '7'">
                             <input type="button" value="8" onclick="display.value += '8'">
                             <input type="button" value="9" onclick="display.value += '9'">
-                            <input type="button" value="*" onclick="display.value += '*'">
+                            <input type="button" value="X" onclick="display.value += '*'">
                         </div>
                         <div>
                             <input type="button" value="4" onclick="display.value += '4'">
