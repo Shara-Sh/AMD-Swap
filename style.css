@@ -8,12 +8,65 @@
 }
 
 body {
-    touch-action: pan-y;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--black);
+    touch-action: none;
     user-select: none;
+}
+
+.swap-box {
+    padding: 0 5%;
+    width: 90%;
+    background-color: var(--selectedwhite);
+    position: fixed;
+}
+
+h1 {
+    font-family: Pacifico;
+    color: var(--red);
+}
+
+a {
+    cursor: pointer;
+}
+
+img {
+    margin-right: 5px;
+}
+
+.cal-overlay {
+    background-color: var(--selectedwhite);
+    position: fixed;
+}
+
+.cal-overlay-hidden {
+    visibility: hidden;
+}
+
+.cal-display {
+    width: 100% !important;
+    padding: 20px;
+    pointer-events: none;
+}
+
+.calculator form input {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background: var(--black);
+    font-size: 20px;
+    color: var(--selectedwhite);
+    cursor: pointer;
+    margin: 2px;
 }
 
 @media screen and (min-width: 1024px) {
     .swap-box {
+        width: 25% !important;
+        padding: 0 2% !important;
+    }
+    .cal-overlay {
         width: 25% !important;
         padding: 0 2% !important;
     }

@@ -49,3 +49,19 @@ function clearAllInputs() {
         field.value = '';
     }
 }
+
+const swapBox = document.getElementById("swap-box");
+const swapOverlay = document.getElementById("calOverlay");
+const swapBoxDiamention = swapBox.getBoundingClientRect();
+
+swapOverlay.style.width = swapBoxDiamention.width + "px";
+swapOverlay.style.height = swapBoxDiamention.height + "px";
+
+$(document).ready(function() {
+    $("#calIcon").click(function() {
+        $("#calOverlay").removeClass("cal-overlay-hidden");
+    });
+    $("#xIcon").click(function() {
+        $("#calOverlay").addClass("cal-overlay-hidden");
+    });
+});
