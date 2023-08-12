@@ -10,7 +10,7 @@
 body {
     height: 100vh;
     overflow: hidden;
-    background-color: var(--black);
+    background-color: var(--black) !important;
     touch-action: none;
     user-select: none;
 }
