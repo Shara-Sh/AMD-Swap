@@ -1,10 +1,10 @@
 const currencyData = [
-    { name: 'amd', rate: 385.90, symbol: '֏' },
+    { name: 'amd', rate: 386.81, symbol: '֏' },
     { name: 'usd', rate: 1, symbol: '$' },
-    { name: 'tom', rate: 49673, symbol: 'T' },
+    { name: 'tom', rate: 48868, symbol: 'T' },
     { name: 'gel', rate: 2.62, symbol: '₾' },
     { name: 'gbp', rate: 0.79, symbol: '£' },
-    { name: 'eur', rate: 0.91, symbol: '€' },
+    { name: 'eur', rate: 0.92, symbol: '€' },
     // Add more currencies here
 ];
 

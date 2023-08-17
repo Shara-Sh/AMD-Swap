@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>AMD Swap</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
         <meta name="theme-color" content="#1e1e1e">
         <link rel="canonical" href="https://shara-sh.github.io/AMD-Swap/" />
         <link rel="manifest" href="manifest.json">
@@ -39,6 +40,7 @@
                 <a id="calIcon"><i class="fa-solid fa-calculator fa-2xl" style="color: #1e1e1e;"></i></a>
             </div>
             <div class="main">
+                <!-- AMD -->
                 <div class="amd-amount mt-3">
                     <div class="d-flex">
                         <img src="src/img/armenia-flag-xl.jpg" width="32px" height="22.85" alt="amd" class="rounded-1 mb-1" id="amdFlag">
@@ -47,6 +49,7 @@
                     <input id="amd-input" type="text" pattern="[0-9]*" inputmode="numeric" class="amd-input container-fluid">
                 </div>
                 <hr>
+                <!-- TOM -->
                 <div class="tom-amount mt-3">
                     <div class="d-flex">
                         <img src="src/img/iran-flag-xl.jpg" width="32px" height="22.85" alt="tom" class="rounded-1 mb-1" id="tomFlag">
@@ -54,20 +57,23 @@
                     </div>
                     <input id="tom-input" type="text" pattern="[0-9]*" inputmode="numeric" class="tom-input container-fluid">
                 </div>
-                <div class="gel-amount mt-3">
+                <!-- GEL -->
+                <div class="gel-amount mt-3" hidden>
                     <div class="d-flex">
                         <img src="src/img/georgia-flag-xl.jpg" width="32px" height="22.85" alt="gel" class="rounded-1 mb-1" id="gelFlag">
                         <b class="mb-0">GEL</b>
                     </div>
                     <input id="gel-input" type="text" pattern="[0-9]*" inputmode="numeric" class="gel-input container-fluid">
                 </div>
+                <!-- USD -->
                 <div class="usd-amount mt-3">
                     <div class="d-flex">
                         <img src="src/img/united-states-of-america-flag-xl.jpg" width="32px" height="22.85" alt="usa" class="rounded-1 mb-1">
                         <b class="mb-0">USD</b>
                     </div>
-                    <input id="usd-input" type="text" pattern="[0-9]*" inputmode="numeric" class="usd-input container-fluid">
+                    <input id="usd-input" type="text" pattern="[0-9]*([.][0-9]+)?" inputmode="decimal" class="usd-input container-fluid">
                 </div>
+                <!-- GBP -->
                 <div class="gbp-amount mt-3">
                     <div class="d-flex">
                         <img src="src/img/united-kingdom-flag-xl.jpg" width="32px" height="22.85" alt="gbp" class="rounded-1 mb-1" id="gbpFlag">
@@ -75,6 +81,7 @@
                     </div>
                     <input id="gbp-input" type="text" pattern="[0-9]*" inputmode="numeric" class="gbp-input container-fluid">
                 </div>
+                <!-- EUR -->
                 <div class="eur-amount mt-3">
                     <div class="d-flex">
                         <img src="src/img/europe-flag-xl.jpg" width="32px" height="22.85" alt="eur" class="rounded-1 mb-1" id="eurFlag">
