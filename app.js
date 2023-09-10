@@ -1,10 +1,10 @@
 const currencyData = [
-    { name: 'amd', rate: 386.81, symbol: '֏' },
+    { name: 'amd', rate: 384.33, symbol: '֏' },
     { name: 'usd', rate: 1, symbol: '$' },
-    { name: 'tom', rate: 48868, symbol: 'T' },
-    { name: 'gel', rate: 2.62, symbol: '₾' },
-    { name: 'gbp', rate: 0.79, symbol: '£' },
-    { name: 'eur', rate: 0.92, symbol: '€' },
+    { name: 'tom', rate: 49682, symbol: 'T' },
+    { name: 'gel', rate: 2.63, symbol: '₾' },
+    { name: 'gbp', rate: 0.80, symbol: '£' },
+    { name: 'eur', rate: 0.93, symbol: '€' },
     // Add more currencies here
 ];
 
@@ -37,9 +37,16 @@ function updateCurrencyInputs(baseCurrency) {
         clearAllInputs();
     } else {
         for (const currency of currencyData) {
-            const convertedAmount = baseAmount * (currency.rate / baseCurrency.rate);
-            const formattedAmount = currency.symbol + ' ' + convertedAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
-            inputFields[currency.name].value = isNaN(convertedAmount) ? '' : formattedAmount;
+            if (currency.name == "tom" || currency.name == "amd") {
+                const convertedAmount = baseAmount * (currency.rate / baseCurrency.rate);
+                const formattedAmount = currency.symbol + ' ' + convertedAmount.toLocaleString(undefined, { maximumFractionDigits: 0 });
+                inputFields[currency.name].value = isNaN(convertedAmount) ? '' : formattedAmount;
+            }
+            else {
+                const convertedAmount = baseAmount * (currency.rate / baseCurrency.rate);
+                const formattedAmount = currency.symbol + ' ' + convertedAmount.toLocaleString(undefined, { minimumFractionDigits: 0 });
+                inputFields[currency.name].value = isNaN(convertedAmount) ? '' : formattedAmount;
+            }
         }
     }
 }
