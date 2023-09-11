@@ -19,7 +19,7 @@ const inputFields = {
 };
 
 for (const currency of currencyData) {
-    inputFields[currency.name].addEventListener('input', function () {
+    inputFields[currency.name].addEventListener('blur', function () { // if you want decimal for usd replace input with blur.
         updateCurrencyInputs(currency);
     });
 
