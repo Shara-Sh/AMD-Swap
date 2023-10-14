@@ -2,7 +2,7 @@ name: Update Currency Data
 
 on:
   schedule:
-    - cron: '0 19 * * *'  # This runs the workflow every day at UTC time
+    - cron: '45 19 * * *'  # This runs the workflow every day at UTC time
 
 jobs:
   update:
@@ -27,6 +27,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          git config --global user.email "sharashahverdian@gmail.com"
+          git config --global user.name "Shara Shahverdian"
           git add price.js
           git commit -m "Update Currency Data"
           git push
