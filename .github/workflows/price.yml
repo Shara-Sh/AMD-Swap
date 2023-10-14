@@ -2,7 +2,7 @@ name: Update Currency Data
 
 on:
   schedule:
-    - cron: '30 20 * * *'  # This runs the workflow every day at UTC  time
+    - cron: '*/5 * * * *'  # This runs the workflow at UTC time
 
 permissions:
   contents: write
@@ -40,3 +40,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           branch: main 
+          github_token: ${{ secrets.GITHUB_TOKEN }}

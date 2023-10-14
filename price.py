@@ -48,7 +48,7 @@ eurPage = requests.get(eurURL)
 eurSoup = BeautifulSoup(eurPage.content, "html.parser")
 eur_element = eurSoup.find("p", class_="result__BigRate-sc-1bsijpp-1 iGrAod")
 
-eurPrice = eur_element.text.split()[0][:-5]
+eurPrice = eur_element.text.split()[0][:-6]
 
 # price.js
 js_variable = f"export const currencyData = [\n"
