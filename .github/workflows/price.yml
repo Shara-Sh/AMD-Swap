@@ -2,7 +2,7 @@ name: Update Currency Data
 
 on:
   schedule:
-    - cron: '0 18 * * *'  # This runs the workflow every day at UTC  time
+    - cron: '0 18 * * *'  # This runs the workflow every day at UTC time
 
 jobs:
   update:
