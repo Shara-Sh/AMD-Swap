@@ -23,7 +23,7 @@ jobs:
           pip install requests beautifulsoup4
 
       - name: Run Python script
-        run: python ../../price.py
+        run: python price.py
 
       - name: Commit and push changes
         run: |
