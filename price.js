@@ -4,6 +4,6 @@ export const currencyData = [
     { name: 'tom', rate: 50798, symbol: 'T' },
     { name: 'gel', rate: 2.69, symbol: '₾' },
     { name: 'gbp', rate: 0.82, symbol: '£' },
-    { name: 'eur', rate: 0.95, symbol: '€' },
+    { name: 'eur', rate: 0.9, symbol: '€' },
     // Add more currencies here
 ];
