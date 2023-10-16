@@ -1,5 +1,5 @@
 export const currencyData = [
-    { name: 'amd', rate: 402.26, symbol: '֏' },
+    { name: 'amd', rate: 402.04, symbol: '֏' },
     { name: 'usd', rate: 1, symbol: '$' },
     { name: 'tom', rate: 50291, symbol: 'T' },
     { name: 'gel', rate: 2.68, symbol: '₾' },
