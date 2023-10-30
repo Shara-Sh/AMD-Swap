@@ -2,7 +2,7 @@ name: Update Currency Data
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # This runs the workflow at UTC time
+    - cron: '0 0 * * *'  # This runs the workflow at UTC time
 
 permissions:
   contents: write
